@@ -113,10 +113,15 @@ $limon: #D2FF96;
     }
 }
 
-// .funci-index {
-//     @include bg-size-pos-repeat;
+.funci-index {
+    margin-left: 10px;
+
+    .text.center {
+        padding: 20px;
+    }
+    //     @include bg-size-pos-repeat;
 //     background-color: grey;
-// }
+}
 
 //INICIO SECCION GESTION VIDEO
 

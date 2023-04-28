@@ -74,6 +74,13 @@
   height: 350px;
 }
 
+.funci-index {
+  margin-left: 10px;
+}
+.funci-index .text.center {
+  padding: 20px;
+}
+
 .gest-video {
   background-image: linear-gradient(rgba(187, 190, 136, 0.849) 80%, rgba(226, 255, 172, 0.582)), url(../img/genteconCompusobreMesa-min.jpg);
   background-size: cover;
@@ -249,7 +256,7 @@
 }
 .jumbo-pag-prod .prod-text {
   color: #132d00;
-  background-color: #D17B0F;
+  background-color: #E8D33F;
   padding: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   border: 1px solid #000000;
