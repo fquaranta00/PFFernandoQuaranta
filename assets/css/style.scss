@@ -1,0 +1,315 @@
+//variables y mixins
+
+$color-negro: #000000;
+$verde-navbar: #D2FF96;
+$nar-osc: #D17B0F;
+$nar-clar: #E8D33F;
+$amarillo: #EDFF7A;
+$limon: #D2FF96;
+
+
+
+@mixin bg-size-pos-repeat {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// fin variables y mixins
+
+.navbar {
+    
+    background-color: $verde-navbar;
+    
+    .imagen-marca {
+        @extend .navbar;
+    
+        img {
+            width: 30px;
+            height: 30px;
+            filter: drop-shadow(1px 3px 3px $nar-osc);
+        }
+    }
+}
+
+.marca {
+    font-size: x-large;
+}
+
+.nav-desplegable {
+    @extend .navbar;
+    border: 0px;
+}
+
+.nav-lista {
+    font-size: larger;
+
+    .nav-pag:hover {
+        text-shadow: $nar-osc 1px 0 12px;
+    } 
+}
+
+
+.btn-custom-class {
+    border-color: rgba(96, 0, 0, 0.233);
+
+    &:hover {
+    background-color: rgba(16, 192, 0, 0.4);
+    box-shadow: rgb(109, 88, 0) 0 1px 1px;
+    }
+}
+
+.jumbo-prod {
+    background-image: linear-gradient(
+        #d17a0f54,
+        #edff7a2f
+    ),url(../img/manosmedicaconceluenmesa-min.jpg);
+    @include bg-size-pos-repeat;
+    margin: 0px;
+    height: 350px;
+    transition: all 3s;
+    transform-origin: center center;
+    border-radius: 0;
+
+    &:hover {
+        background-image: linear-gradient(
+            #d17a0f65,
+            #edff7a52
+        ),url(../img/manosmedicaconceluenmesa-min.jpg);
+    @include bg-size-pos-repeat;
+    margin: 0px;
+    height: 350px;
+    transition: all 3s;
+    transform: scale(1.04);
+    }
+
+    p {
+    color: $color-negro;
+    }
+
+    h2 {
+    color: $color-negro;
+    background-color: #af4ec053;
+    width: 10%;
+    }
+}
+
+// COMIENZO SECCION NOSOTROS
+
+.quienes-back {
+    background-image: linear-gradient( 90deg, $color-negro, rgba(30, 31, 27, 0.534) 34%, rgba(226,255,172,1) 67.2% );
+
+    // border-top: 1px solid $color-negro;
+    // border-bottom: 1px solid $color-negro;
+
+    h3 {
+    text-decoration:underline;
+    }
+
+    .nleft {
+    background-image: url(../img/genteenunacompu-min.jpg);
+    @include bg-size-pos-repeat;
+    height: 350px;
+    }
+}
+
+// .funci-index {
+//     @include bg-size-pos-repeat;
+//     background-color: grey;
+// }
+
+//INICIO SECCION GESTION VIDEO
+
+.gest-video {
+    background-image: linear-gradient(
+        rgba(187, 190, 136, 0.849) 80%,
+        rgba(226, 255, 172, 0.582)), url(../img/genteconCompusobreMesa-min.jpg);
+        @include bg-size-pos-repeat;
+        height: 100%;
+    padding-top: 25px;
+    margin-bottom: 0;
+    border-radius: 0;
+
+    h2 {
+    color: $color-negro;
+    margin-bottom: 20px;
+    padding-top: 0px;
+    background-color: rgba(255, 0, 0, 0.167);
+    width: 45%;
+    }
+
+    p {
+    color: $color-negro;
+    font-size: large;
+    }
+
+    .video {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        padding-bottom: 56.25%; 
+    
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 80%;
+            width: 80%;
+            &:hover {
+                box-shadow: 0 0 18px rgba(0, 0, 0, 0.502);
+            }
+        }
+    }
+    
+    @media (min-width: 1000px) {
+        iframe {
+            width: 60%;
+            height: 60%;
+        }
+    }
+
+
+    @media (min-width: 1800px) {
+        iframe {
+            width: 40%;
+            height: 40%;
+        }
+    }
+}
+
+// FIN SECCION GESTION
+
+
+.div-par-carac {
+    background-color: $nar-clar;
+}
+
+
+// COMIENZO DE FOOTER
+
+.site-footer {
+    background-color: #003605;
+    padding: 45px 0 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #737373;
+
+    h6 {
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-top: 5px;
+        letter-spacing: 2px;
+    }
+
+    a {
+        color: #737373;
+        &:hover { 
+            color: #3366cc;
+            text-decoration: none;
+        }
+    }
+    
+    .footer-links {
+        padding-left: 0;
+        list-style: none;
+        
+        li {
+            display: block;
+        }
+
+        a {
+            color: #737373;
+            &:active, r-links &:focus, &:hover {
+                color: #3366cc;
+                text-decoration: none;
+            }
+        }
+        &.inline li {
+            display: inline-block;
+        }
+    }
+
+    .social-icons {
+        text-align: right;
+        
+        a {
+            width: 40px;
+            line-height: 40px;
+            height: 40px;
+            margin-right: 0;
+            margin-left: 6px;
+            background-color: #33353d;
+            border-radius: 100%;
+        }
+    }
+
+    @media (max-width: 991px) {
+        [class^="col-"] {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-bottom: 0;
+
+        .copyright-text, .social-icons {
+            text-align: center;
+        }
+    }
+}
+
+.copyright-text {
+    margin: 0;
+}
+
+.social-icons {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;  
+        margin-bottom: 4px;
+    }
+
+    a {
+        color: #418660;
+        background-color: #ecefee;
+        line-height: 44px;
+        font-size: 16px;
+        height: 44px;
+        display: inline-block;
+        margin-right: 8px;
+        width: 44px;
+        border-radius: 100%;
+        text-align: center;
+
+        &:active, &:focus, &:hover {
+            background-color: #01ff0189;
+            color: #cd6300;
+        }
+
+        &.size-sm a {
+            width: 34px;
+            line-height: 34px;
+            font-size: 14px;
+            height: 34px;
+        }
+
+        @media (max-width: 767px) {
+            li.title {
+                display: block;
+                font-weight: 600;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@import "../css/producto.scss";
+@import "../css/empresa.scss";
+@import "../css/contacto.scss";
+@import "../css/descarga.scss";

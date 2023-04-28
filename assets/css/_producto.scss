@@ -1,0 +1,55 @@
+$color-negro: #000000;
+$verde-navbar: #D2FF96;
+$nar-osc: #D17B0F;
+$nar-clar: #E8D33F;
+$amarillo: #EDFF7A;
+$limon: #D2FF96;
+// COMIENZO SECCION PRODUCTOS
+
+.jumbo-pag-prod {
+    background-color: $color-negro;
+    background-image: url('../img/formulas.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    margin: 0px;
+    height: 850px;
+    width: auto;
+    
+    .prod-text {
+        .prod-titu {
+            background-color: rgba(255, 0, 0, 0.167);
+            color: $color-negro;
+
+        }
+
+        .prod-titu-p {
+            background-color: rgba(255, 0, 0, 0.167);
+            color: $color-negro;
+
+        }
+
+        color: #132d00;
+        background-color: $nar-osc;
+        padding: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        border: 1px solid $color-negro;
+
+        @keyframes fade-in {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        animation: fade-in 2s ease-in-out;
+
+    }
+}
+
+@for $i from 1 through 3 {
+    .list-prod-#{$i} { 
+        background-color: rgba(30, 193, 38, 0.705); 
+        }
+}
+
+// FIN SECCION PRODUCTOS
