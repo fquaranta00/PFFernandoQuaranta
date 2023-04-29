@@ -99,9 +99,6 @@ $limon: #D2FF96;
 .quienes-back {
     background-image: linear-gradient( 90deg, $color-negro, rgba(30, 31, 27, 0.534) 34%, rgba(226,255,172,1) 67.2% );
 
-    // border-top: 1px solid $color-negro;
-    // border-bottom: 1px solid $color-negro;
-
     h3 {
     text-decoration:underline;
     }
@@ -119,8 +116,6 @@ $limon: #D2FF96;
     .text.center {
         padding: 20px;
     }
-    //     @include bg-size-pos-repeat;
-//     background-color: grey;
 }
 
 //INICIO SECCION GESTION VIDEO

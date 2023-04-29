@@ -3,8 +3,26 @@
 //      DE LA PÁGINA "CONTACTO"
 //   */
 
+
+//variables y mixins
+
+$color-negro: #000000;
+$verde-navbar: #D2FF96;
+$nar-osc: #D17B0F;
+$nar-clar: #E8D33F;
+$amarillo: #EDFF7A;
+$limon: #D2FF96;
+//
+
+
 .divContactos {
     padding: 10px;
+
+    .titulomensajeContacto {
+        background-color: #e8d43fac;
+        width: 60%;
+        padding-bottom: 20px;
+    }
 
     background-image: linear-gradient(
     rgba(129, 132, 91, 0.459),
@@ -15,40 +33,11 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    // .titulomensajeContacto {
-    //     margin-left: 5px;
-    // }
-    
-    // .bloqueMensaje {
-    //     display: inline-blockfif;
-    //     width: auto;
-    //     height: 650px;
-        
-    //     #name {
-    //         margin-bottom: 10px;
-    //         margin-left: 10px;
-    //         width: 520px;
-    //     }
-        
-    //     #email {
-    //         margin-bottom: 10px;
-    //         margin-left: 13px;
-    //         width: 520px;
-    //     }
-        
-    //     #message {
-    //         margin-left: 13px;
-    //         width: 189px;
-    //         width: 520px;
-    //     }
-    
-    //     .botonenviarContacto {
-    //         padding: 5px;
-    //         margin: 0px;
-    //         margin-left: 13px;
-    //         padding-right: 140px;
-    //     }
-    // }
+    .form-label {
+        font-weight: 500;
+        background-color: #d17a0f63;
+    }
+
 
     .bloqueContacto {
         display: inline-block;
